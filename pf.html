@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jyotir's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/db5400783a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <!-- <img src="logo.png" alt="LOGO" class="logo"> -->
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <!-- <li><a href="#photos">Gallery</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">CV</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Computer Science Student</p>
+            <h1>Jyotiraditya Singh</h1>
+            <h6>University of Petroleum and Energy Studies <br> Energy Acres PO Bidholi via Prem Nagar <br> Dehradun-248007 (Uttarakhand), India 
+            </h6>
+        </div>
+    </div>
+</div>
+<!-- ABOUT ME ______________________ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="me.jpg" alt="me">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>
+                    Hi, this is Jyotiraditya Singh.
+                    I am a first year student at UPES(University of Petrolium and Energy Studies)
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('cskills')">Computer Skills</p>
+                    <p class="tab-links"onclick="opentab('planguages')">Programming Languages</p>
+                    <p class="tab-links"onclick="opentab('skills')">Skills</p>
+                </div>
+                <div class="tab-contents active-tab" id="cskills">
+                    <ul>
+                        <li><span>MS Office</span></li>
+                        <li><span>Linux</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="planguages">
+                    <ul>
+                        <li><span>C</span></li>
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>Js</span></li>
+                        <li><span>C++</span></li>
+                        <li><span>JAVA</span></li>
+                        <li><span>Python</span></li>
+                        <li><span>ReactJS</span></li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li><span>Confidence</span></li>
+                        <li><span>Communicational Skills</span></li>
+                        <li><span>Team work skills</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- photos------------------------------------- -->
+
+
+<!-- <div id="photos">
+    <div class="container">
+        <h1 class="sub-title">My Clicks</h1>
+        <div class="photo-list">
+            <div>
+                    <a href="pic1.jpg"><img src="pic1.jpg" height="150px" alt=""></a>
+                </div>
+                <div>
+                    <a href="pic2.jpg"><img src="pic2.jpg" height="150px" alt=""></a>
+                </div>
+                <div>
+                    <a href="pic3.jpg"><img src="pic3.jpg" height="150px" alt=""></a>
+                </div>
+                <div>
+                    <a href="pic4.jpg"><img src="pic4.jpg" height="150px" alt=""></a>
+                </div>
+                <div>
+                    <a href="pic5.jpg"><img src="pic5.jpg" height="150px" alt=""></a>
+                </div>
+            </div>
+    </div>
+</div> -->
+
+
+<!-- contact---------------------- -->
+<br>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fas fa-paper-plane"></i> jyotir.aditya.tf@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>8791978912</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/jyotir-aditya-028925249"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/j_is_sus/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/jyotir07"><i class="fa-brands fa-github"></i></a>
+                    
+                </div>
+                <a href="Jyotiraditya_SIngh (resume).pdf" download class="btn">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form action="">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Made wtih <i class="fas fa-heart"></i> by Jyotiraditya Singh </p>
+    </div>
+</div> 
+
+
+
+<script>
+
+        var tablinks = document. getElementsByClassName ("tab-links");
+        var tabcontents = document. getElementsByClassName ("tab-contents");
+        
+        function opentab (tabname){
+            for(tablink of tablinks){
+            tablink. classList. remove ("active-link");
+            }
+
+            for (tabcontent of tabcontents){
+            tabcontent. classList. remove("active-tab");
+            }
+            event. currentTarget. classList. add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+</script>
+</body>
+</html>
