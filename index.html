@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <div class = 'parent-gen-pwd'>
+
+      <div class = 'output' id = 'output'> Password </div>
+
+      <div class = 'wrapper-input'>
+
+        <label for = 'lengthPwd'> Length </label>
+        <input type = 'range' id = 'lengthPwd' min = '8' max = '128'
+        value = '50' oninput="this.nextElementSibling.
+        textContent = this.value">
+        <span>64</span>
+      </div>
+
+      <div class = 'wrapper-input'>
+
+        <label for = 'smallLetters'> Lower Case </label>
+        <input type = 'checkbox' id = 'smallLetters' checked> 
+
+      </div>
+
+      <div class = 'wrapper-input'>
+
+        <label for = 'bigLetters'> Upper Case </label>
+        <input type = 'checkbox' id = 'bigLetters' checked> 
+
+      </div>
+
+      <div class = 'wrapper-input'>
+
+        <label for = 'numbers'> Numbers </label>
+        <input type = 'checkbox' id = 'numbers' checked> 
+        
+      </div>
+
+      <div class = 'wrapper-input'>
+
+        <label for = 'special'> Special Characters </label>
+        <input type = 'checkbox' id = 'special' checked> 
+        
+      </div>
+
+      <div class = 'wrapper-input'>
+
+        <button type = 'button' id = 'generate'> Generate </button>
+        <button type = 'button' id = 'copy'> Copy </button>
+        
+      </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html> 
