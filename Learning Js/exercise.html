@@ -1,0 +1,42 @@
+<!-- 
+  A. Create a variable then write "Coffee for (name) using the variable"
+  B. Create 3 variables for coffee, bagle and soup, then add the total cost and display it
+  C. Add 10% tax and then print the cost of the order
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variable exercise</title>
+</head>
+<body>
+  <button onclick="
+    console.log(`Coffee: ${coffee}`);
+    console.log(`Bagle: ${bagle}`);
+    console.log(`Soup: ${soup}`);
+    ">Place order</button>
+
+    <button onclick="
+    console.log(`Total cost: ${totalCost}`); 
+    ">Cost</button>
+
+  <button onclick="
+    console.log(`Order total: ${totalCost}`);
+    ">Tax</button>
+  <script>
+    const name = "Jyotir";
+    console.log(`Order for ${name}`);
+    document.write("Order for " + name + "<br>");
+    
+    const coffee = 5;
+    const bagle = 3;
+    const soup = 9;
+    let totalCost = coffee + bagle + soup;
+
+    const tax = 0.1;
+    totalCost = totalCost + (totalCost * tax);
+  </script>
+</body>
+</html>
