@@ -8,18 +8,7 @@
 <body>
   <h2>Rock Paper Sissiors Game</h2>
   <button onclick="
-  let computerMove = '';
-    const randomNumber = Math.random();
-    if(randomNumber > 0 && randomNumber < 1/3){
-      computerMove = 'Rock';
-    }
-    else if(randomNumber > 1/3 && randomNumber < 2/3){
-      computerMove = 'paper';
-    }
-    else if (randomNumber > 2/3 && randomNumber < 1){
-      computerMove = 'sissors'
-    }
-    console.log(`Computer move: ${computerMove}`);
+    const computerMove = pickComputerMove();
     //comparing the moves to the Computer
     let result = '';
     if (computerMove === 'Rock'){
@@ -35,18 +24,7 @@
     ">Rock</button>
   
   <button onclick="
-  let computerMove = '';
-    const randomNumber = Math.random();
-    if(randomNumber > 0 && randomNumber < 1/3){
-      computerMove = 'Rock';
-    }
-    else if(randomNumber > 1/3 && randomNumber < 2/3){
-      computerMove = 'paper';
-    }
-    else if (randomNumber > 2/3 && randomNumber < 1){
-      computerMove = 'sissors'
-    }
-    console.log(`Computer move: ${computerMove}`);
+    const computerMove = pickComputerMove();
     //comparing the moves to the Computer
     let result = '';
     if (computerMove === 'Rock'){
@@ -62,7 +40,28 @@
   ">Paper</button>
   
   <button onclick="
-  let computerMove = '';
+    
+  ">Sissors</button>
+  <script>
+
+    function playGame(){
+      const computerMove = pickComputerMove();
+    //comparing the moves to the Computer
+    let result = '';
+    if (computerMove === 'Rock'){
+      result ='You loose';
+    }
+    else if (computerMove === 'paper'){
+      result = 'You win';
+    }
+    else if (computerMove === 'sissors'){
+      result = 'Draw';
+    }
+    alert(`Computer chose ${computerMove} you choose Sissiors. ${result}`);
+    }
+
+    function pickComputerMove(){
+    let computerMove = '';
     const randomNumber = Math.random();
     if(randomNumber > 0 && randomNumber < 1/3){
       computerMove = 'Rock';
@@ -74,21 +73,8 @@
       computerMove = 'sissors'
     }
     console.log(`Computer move: ${computerMove}`);
-    //comparing the moves to the Computer
-    let result = '';
-    if (computerMove === 'Rock'){
-      result ='You loose';
+    return computerMove;
     }
-    else if (computerMove === 'paper'){
-      result = 'You win';
-    }
-    else if (computerMove === 'sissors'){
-      result = 'You lose';
-    }
-    alert(`Computer chose ${computerMove} you choose Sissiors. ${result}`);
-  ">Sissors</button>
-  <script>
-
   </script>
 </body>
 </html>
