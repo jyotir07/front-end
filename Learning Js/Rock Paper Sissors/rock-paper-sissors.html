@@ -8,25 +8,35 @@
 <body>
   <h2>Rock Paper Sissiors Game</h2>
   <button onclick="
-    const computerMove = pickComputerMove();
-    //comparing the moves to the Computer
-    let result = '';
-    if (computerMove === 'Rock'){
-      result ='Draw';
-    }
-    else if (computerMove === 'paper'){
-      result = 'You loose';
-    }
-    else if (computerMove === 'sissors'){
-      result = 'You win';
-    }
-    alert(`Computer chose ${computerMove} you choose Rock. ${result}`);
+  playGame('Rock')
     ">Rock</button>
   
   <button onclick="
-    const computerMove = pickComputerMove();
+  playGame('Paper')
+  ">Paper</button>
+  
+  <button onclick="
+    playGame('Sissors')
+  ">Sissors</button>
+  <script>
+
+    function playGame(playerMove){
+      const computerMove = pickComputerMove();
     //comparing the moves to the Computer
     let result = '';
+
+    if(playerMove === 'Sissors'){
+      if (computerMove === 'Rock'){
+        result ='You loose';
+      }
+      else if (computerMove === 'paper'){
+        result = 'You win';
+      }
+      else if (computerMove === 'sissors'){
+        result = 'Draw';
+     }
+   }
+   else if(playerMove === 'Paper'){
     if (computerMove === 'Rock'){
       result ='You win';
     }
@@ -36,28 +46,19 @@
     else if (computerMove === 'sissors'){
       result = 'You loose';
     }
-    alert(`Computer chose ${computerMove} you choose Paper. ${result}`);
-  ">Paper</button>
-  
-  <button onclick="
-    
-  ">Sissors</button>
-  <script>
-
-    function playGame(){
-      const computerMove = pickComputerMove();
-    //comparing the moves to the Computer
-    let result = '';
+   }
+   else if(playerMove === 'Rock'){
     if (computerMove === 'Rock'){
-      result ='You loose';
+      result ='Draw';
     }
     else if (computerMove === 'paper'){
-      result = 'You win';
+      result = 'You loose';
     }
     else if (computerMove === 'sissors'){
-      result = 'Draw';
+      result = 'You win';
     }
-    alert(`Computer chose ${computerMove} you choose Sissiors. ${result}`);
+   }
+    alert(`Computer chose ${computerMove}. you choose ${playerMove}. ${result}`);
     }
 
     function pickComputerMove(){
